@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Junção de pagamentos Paypal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="alert alert-info col-md-12">
+            <strong>Informação!</strong> Pagamentos para ComExito via Paypal
+        </div>        
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"  method="post">
+            <input type="hidden" name="charset" value="utf-8">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="business" value="contato@comexito.com.br">
+            <input type="hidden" name="return" value="https://comexito.com.br/retorno.asp">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="upload" value="1">
+
+            <input type="hidden" name="item_number_1" value="405">
+            <input type="hidden" name="item_name_1" value="NR 20 Básico Parte Teórica">
+            <input type="hidden" name="amount_1" value="41.93">
+            <input type="hidden" name="item_number_2" value="132">
+            <input type="hidden" name="item_name_2" value="NR 10 Básico Parte Teórica">
+            <input type="hidden" name="amount_2" value="90.93">
+            <input type="hidden" name="item_number_3" value="431">
+            <input type="hidden" name="item_name_3" value="Form. Auditor ISO 45001 ISO 19011:2018">
+            <input type="hidden" name="amount_3" value="41.93">
+
+            <input type="hidden" name="custom" value="3434">
+            <input type="hidden" name="lc" value="PT" />
+            <input type="hidden" name="email" value="thyago.pacher@gmail.com">
+            <input type="hidden" name="first_name" value="tHYAGO">
+            <input type="hidden" name="last_name" value="PACHER">            
+            <input type="submit" class="btn btn-primary" name="submit" value="Pagar Paypal">            
+        </form>
+    </body>
+</html>
